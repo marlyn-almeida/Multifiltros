@@ -1,0 +1,621 @@
+/*******************************/
+/********* GLOBALES*********/
+/*******************************/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    color: #444444;
+    font-weight: 400;
+    background: #ffffff;
+    font-family: 'Barlow', sans-serif;
+}
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: #202C45;
+}
+a {
+    color: #ffffff;
+    transition: .3s;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: #E81C2E;
+    outline: none;
+    text-decoration: none;
+} 
+ul {
+    margin-top: 15px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    align-items: center;
+    text-transform: uppercase;
+}
+ul li::before {
+    margin-top: 3px;
+    content: "✓";
+    color: white;
+    margin-right: 8px;
+}
+/**********************************/
+/*********** NAVEGACION**********/
+/**********************************/
+.nav-bg {
+    padding: 0%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #202C45;
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.navegacion a{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-right: 50px;
+}
+.navegacion-imagen {
+    display: flex;
+    justify-content: end;
+}
+.img-logo {
+    width: 195px;
+}
+.buscar {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    position: relative;
+    padding: 5px;
+}
+.buscar input {
+    width: 0;
+    height: 35px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+.btn {
+    width: 47px;
+    height: 47px;
+    line-height: 46px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: white;
+    text-align: center;
+    color:#202C45;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+.btnn {
+    width: auto;
+    height: 25px;
+    background: white;
+    text-align: center;
+    background-color: #3b4a6a;
+    font-size: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #929191; 
+    display: block; 
+    margin: 0 auto; 
+    border: none;
+  }
+
+.btnn:hover{
+    background-color: #1f53c5;
+}  
+
+.buscar:hover input {
+    width: 120px;
+}  
+.buscar input:focus {
+    width: 150px;
+}
+@media (max-width: 780px) {
+    .nav-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .img-logo {
+    width: 100%;
+    height: 200px;
+    order: 1;
+    }
+    .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    order: 2;
+    justify-content: center;
+    }
+    .buscar {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    }
+    .navegacion {
+    flex-wrap: wrap;
+    margin: 0%;
+    }
+    .navegacion a {
+    width: 100%;
+    text-align: center;
+    margin: 7px;
+    padding: 0%;
+    }
+    .btn {
+    display: none;
+    padding: 0%;
+    }
+    .buscar input{
+    width: 120px;
+    }
+}
+/*******************************/
+/********* HERO IMG**********/
+/*******************************/
+.hero {
+    background-image: url(../img/bg-index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    
+    position: relative;
+    margin-bottom: 5px;
+}
+.contenido-hero {
+    position: absolute;
+    background-color: rgba( 0,0,0, .7 ); 
+    background-color: rgb( 0 0 0 / 50% );          
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-text {
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+.carousel-text h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: bold;
+}
+.carousel-text h3{
+    color: #E81C2E;
+    font-size: 25px;
+}
+.boton {
+    background-color: #E81C2E;
+    padding: 1.3rem 0.5rem;
+    margin-top: 2rem;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    border-radius: 1.8rem;
+    width: 11%;
+    text-align: center;
+    border: none;
+}
+.contenido-hero a{
+    color: #ffffff;
+    
+}
+.contenido-hero a:hover{
+    background-color: #202C45;
+    color:#E81C2E;
+    transition-duration: 0.7s;
+}
+@media only screen and (max-width: 780px) {
+    .hero {
+        background-position: center center;
+    }
+    .contenido-hero {
+        text-align: center;
+    }
+    .carousel-text {
+        text-align: center;
+    }
+    .boton {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+
+        color: #ffffff;
+        padding: 1.3rem 0.5rem;
+        margin-top: 2rem;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: 'Barlow', sans-serif;
+        border-radius: 1.8rem;
+        width: 30%;
+        text-align: center;
+        border: none;
+    }
+}
+/*******************************/
+/********* Main **********/
+/*******************************/
+.titulo-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #202C45;
+    margin-left: 75px;
+    font-size: 20px;
+}
+@media (max-width: 780px) { 
+    .titulo-main {
+        margin-bottom: 2rem;
+        margin-left: 0px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+.titulo-main p {
+    margin-top: 12px;
+}
+.contenedor-p {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.contenido-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1px;
+    margin-right: 5px;
+}
+@media (max-width: 780px) {
+    .contenido-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.contenido-produtos a{
+    color: #202C45;
+}
+.contenido-produtos a:hover{
+    color: #E81C2E;
+}
+.img-oferta-1 {
+    width: 300px;
+    height: 500px;
+}
+.Boton_Imagen {
+    align-items: center;
+    justify-items: center;
+}
+.centrar-imagen-productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-aside-ofertas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 350px) { 
+    .contenedor-aside-ofertas{
+        display: none;
+    }
+}
+/*******************************/
+/*****Formulario Registro*******/
+/*******************************/
+.Forma_Registro{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+@media (max-width: 780px) {
+    .cuadro {
+        width: 30%; 
+    }
+}
+.Forma_Registro h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+.Forma_Registro h3:hover{
+    color:#E81C2E;
+}
+.Controles{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+.Forma_Registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+.Forma_Registro a{
+    color: white;
+    text-decoration: none;
+}
+.Forma_Registro a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.Forma_Registro .Boton_Registro{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+/*******************************/
+/*********Contacto*********/
+/*******************************/
+.contenedor-mapa {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    justify-items: center;
+    margin-left: 0px;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#contacto-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-size: 25px;
+}
+#centrar-imagen-contacto {
+    display: flex;
+    justify-content: start;
+}
+#centrar-imagen-contacto a img{
+    margin-top: 1rem;
+    border: 1.5px solid #202C45;
+    border-radius: 2%;
+
+}
+.informacion-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    font-size: 25px;
+    text-align: center;
+}
+.btn-contacto {
+    color: #24303c;
+    
+}
+.fa-brands {
+    font-size: 70px;
+    padding: 1rem;
+    margin-bottom: 2px;
+}
+@media (max-width: 780px) { 
+    .contenedor-mapa{
+        display: flex;
+        flex-direction: column;
+    }
+    .informacion-contacto{
+        flex-direction: row;
+        font-size: 15px;
+        margin-left: 0px;
+        font-size: 0px;
+    }
+    .fa-brands {
+        font-size: 40px;
+    }
+    .centrar-imagen-contacto a img{
+        width: 380px;
+        justify-content: center;
+        margin-top: 1rem;
+        border-radius: 2%;
+    }
+    .espacio-imagen{
+        display: none;
+    }
+}
+/*******************************/
+/********* Productos **********/
+/*******************************/
+.lubricantes-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.lubricantes-titulo h1{
+    color: #E81C2E;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+.contenedor-lubricantes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.lubricantes-contenido {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.lubricantes-contenido h2{
+    text-transform: uppercase;
+    text-decoration:underline;
+}
+@media (max-width: 780px) { 
+    .contenedor-lubricantes {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        grid-gap: 0px;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .lubricantes-titulo h1{
+        margin-bottom: 0rem;
+    }
+    .lubricantes-contenido {
+        margin-top: 10px;
+    }
+    .lubricantes-contenido h2{
+        display: none;
+    }
+    .lubricantes-titulo {
+        text-align: center;
+    }
+    .lubricantes-titulo h1{
+        color: #E81C2E;
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+    }
+}
+/*******************************/
+/********* Nosotros **********/
+/*******************************/
+.nosotros-info {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nosotros-info p{
+    margin-top: 0.5rem; 
+    font-size: 20px;
+}
+.nosotros-info h2{
+    color: #202C45;
+    text-transform: uppercase;
+}
+/*******************************/
+/********* Footer **********/
+/*******************************/
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #202C45;
+    width: auto;
+    height: auto;
+    padding: 15px;
+}
+.container {
+    text-align: center;
+}
+.container h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #E81C2E;
+}
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.footer-social a{
+    margin-top: 0px;
+    margin: 0 15px;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    justify-content: center;
+}
+.footer-contact a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.titulo-contacto {
+    display: flex;
+    justify-content: center;
+}
+.contacto {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contacto i{ 
+    margin: 10px 0;
+}
+.copyright {
+    color: #ffffff;
+}
+.copyright a{
+    color: #E81C2E;
+}
+.copyright a:hover {
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+} 
+.sobre-nostros {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
